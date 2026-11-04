@@ -71,11 +71,11 @@ Mosque finances differ from commercial enterprises because funds are sacred trus
 
 ---
 
-## 5. Deployment
+## 5. Deployment & Links
 
-- **GitHub Repository:** `islamwell/nurulquran-budget`
-- **Cloudflare Pages:** Deployed directly via Cloudflare Wrangler.
+- **Live Web Application:** [https://nurulquran-budget.pages.dev](https://nurulquran-budget.pages.dev)
+- **GitHub Repository:** [https://github.com/islamwell/nurulquran-budget](https://github.com/islamwell/nurulquran-budget)
 
 ---
 *Maintained by Jamia Masjid & Madrasa Nurulquran Committee, Joharabad, District Khushab, Punjab, Pakistan.*  
-*Current Release:* `v1.0.1 (updated 2026-11-04 21:28)`
+*Current Release:* `v1.0.2 (updated 2026-11-04 21:29)`
