@@ -60,11 +60,15 @@ Mosque finances differ from commercial enterprises because funds are sacred trus
 
 ## 4. Key Application Features
 
-- **Full 12-Month Cash Flow:** Detailed month-by-month forecasting for all 11 income lines and 21 expense categories.
+- **Full 12-Month Cash Flow:** Detailed month-by-month forecasting for all 12 income lines and 23 expense categories.
+- **Auto-Comma Formatting (3 Digits):** Numbers automatically format with commas (e.g. `1,250,000`) in all numeric input fields in real time as you type, while preserving cursor position.
+- **Interactive Monthly Cash Flow Chart:** Dynamic visual bar chart comparing Income vs. Expenses across all 12 months with Ramadan, Qurbani, and Summer heat indicators and live hover tooltips.
+- **Fund Filter Pills:** Instantly filter the entire budget view by fund category (`All`, `General`, `Zakat`, `Madrasa`, `Waqf`, `Sadaqah`, `Fitrana`, `Qurbani`).
+- **Quick-Fill Helper (`⚡Fill`):** Quick button on each row to replicate an amount across all 12 months in one click.
 - **Sticky Column Headers:** Line item titles stay pinned while scrolling horizontally through the 12 months.
 - **Interactive Shariah Audit:** Automated fund accounting table verifying that restricted Zakat and Waqf funds are not running unbacked deficits.
-- **One-Click Joharabad 2027 Benchmark:** Pre-loads verified local estimates.
-- **LocalStorage Auto-Save:** Automatically persists edits locally without data loss.
+- **One-Click Joharabad 2027 Benchmark:** Pre-loads verified local estimates (with all historical typos corrected).
+- **LocalStorage Auto-Save:** Automatically persists edits locally with a visual pulse indicator.
 - **CSV & JSON Export/Import:** Full data portability and backup support.
 - **Print / PDF Friendly:** Dedicated landscape print layout eliminating buttons and formatting inputs for official signatures.
 - **Semantic & Accessible:** Form controls with proper ARIA attributes, semantic regions, and contrast compliance.
@@ -78,4 +82,4 @@ Mosque finances differ from commercial enterprises because funds are sacred trus
 
 ---
 *Maintained by Jamia Masjid & Madrasa Nurulquran Committee, Joharabad, District Khushab, Punjab, Pakistan.*  
-*Current Release:* `v1.0.2 (updated 2026-11-04 21:29)`
+*Current Release:* `v1.0.3 (updated 2026-11-04 22:12)`

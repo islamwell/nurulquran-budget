@@ -7,25 +7,31 @@
 <meta name="description" content="Comprehensive Annual Operating and Development Budget for Jamia Masjid and Madrasa Nurulquran, Joharabad, Khushab, Punjab, Pakistan for Fiscal Year 2027." />
 <style>
   :root {
-    --primary: #123e32;
-    --primary-light: #1b5343;
-    --primary-dark: #0b261f;
-    --accent: #c59b27;
-    --accent-light: #f7eed7;
-    --accent-dark: #977313;
-    --light-bg: #f3f6f4;
+    --primary: #064e3b;
+    --primary-light: #047857;
+    --primary-dark: #022c22;
+    --accent: #d97706;
+    --accent-light: #fef3c7;
+    --accent-dark: #b45309;
+    --gold: #c59b27;
+    --gold-light: #fdf8e6;
+    --light-bg: #f2f7f4;
     --card-bg: #ffffff;
-    --border: #d2ddd6;
-    --border-light: #e5ece7;
-    --text-main: #1e2924;
-    --text-muted: #53645b;
-    --danger: #b31b2c;
-    --danger-bg: #fdebee;
-    --ok: #15803d;
-    --ok-bg: #edfbf2;
-    --warning: #b45309;
+    --border: #cbd5e1;
+    --border-light: #e2e8f0;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+    --danger-border: #fca5a5;
+    --ok: #16a34a;
+    --ok-bg: #f0fdf4;
+    --ok-border: #86efac;
+    --warning: #d97706;
     --warning-bg: #fffbeb;
-    --focus-ring: #c59b27;
+    --info-bg: #f0f9ff;
+    --info-text: #0284c7;
+    --focus-ring: #d97706;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,54 +39,60 @@
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text-main);
-    background: #e4e9e6;
+    background: #e2e8e4;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
     line-height: 1.45;
     padding: 16px;
   }
 
   .container {
-    max-width: 1480px;
+    max-width: 1540px;
     margin: 0 auto;
     background: var(--card-bg);
     padding: 32px 36px;
-    box-shadow: 0 10px 30px rgba(18, 62, 50, 0.08), 0 1px 3px rgba(0,0,0,0.05);
-    border-radius: 10px;
+    box-shadow: 0 16px 40px rgba(6, 78, 59, 0.09), 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(6, 78, 59, 0.12);
   }
 
   /* Header Branding */
   header.masjid-header {
     text-align: center;
-    border-bottom: 4px solid var(--accent);
-    padding-bottom: 18px;
+    border-bottom: 4px solid var(--gold);
+    padding: 10px 10px 22px;
     margin-bottom: 24px;
     position: relative;
+    background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+    border-radius: 8px 8px 0 0;
   }
   .header-badge {
     display: inline-block;
-    background: var(--light-bg);
-    color: var(--primary);
-    border: 1px solid var(--border);
-    padding: 3px 12px;
-    border-radius: 14px;
+    background: var(--primary);
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 20px;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
     margin-bottom: 8px;
+    box-shadow: 0 2px 6px rgba(6, 78, 59, 0.2);
   }
   .arabic-title {
-    font-size: 20px;
+    font-size: 23px;
     font-family: "Traditional Arabic", "Scheherazade New", serif;
     color: var(--primary);
     direction: rtl;
     margin-bottom: 4px;
     font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
   }
   header h1 {
     margin: 0;
-    color: var(--primary);
-    font-size: 26px;
-    letter-spacing: -0.3px;
+    color: var(--primary-dark);
+    font-size: 27px;
+    letter-spacing: -0.4px;
     font-weight: 800;
   }
   header h2 {
@@ -99,9 +111,10 @@
     gap: 10px;
     background: var(--light-bg);
     border: 1px solid var(--border);
-    padding: 12px 16px;
-    border-radius: 8px;
+    padding: 12px 18px;
+    border-radius: 10px;
     margin-bottom: 22px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
   }
   .toolbar-left, .toolbar-right {
     display: flex;
@@ -119,7 +132,15 @@
     border-radius: 6px;
     border: 1px solid transparent;
     cursor: pointer;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  .btn:active {
+    transform: translateY(0);
   }
   .btn-primary {
     background: var(--primary);
@@ -141,13 +162,13 @@
     border-color: var(--border);
   }
   .btn-outline:hover {
-    background: #f0f4f1;
+    background: #f0f7f4;
     border-color: var(--primary);
   }
   .btn-danger {
     background: #fff;
     color: var(--danger);
-    border-color: #f7c5cc;
+    border-color: var(--danger-border);
   }
   .btn-danger:hover {
     background: var(--danger-bg);
@@ -155,22 +176,31 @@
   .status-badge {
     font-size: 11.5px;
     font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 12px;
+    padding: 5px 12px;
+    border-radius: 14px;
     background: #e2ede6;
     color: var(--primary);
+    transition: all 0.3s ease;
+  }
+  .status-badge.saved-pulse {
+    animation: pulseBadge 1.2s ease-in-out;
+  }
+  @keyframes pulseBadge {
+    0% { transform: scale(1); background: #dcfce7; }
+    50% { transform: scale(1.08); background: #86efac; color: #065f46; }
+    100% { transform: scale(1); background: #dcfce7; }
   }
 
   /* Metadata Section */
   .meta-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 12px;
     margin-bottom: 24px;
-    background: #fafbfa;
+    background: #fafcfb;
     border: 1px solid var(--border);
-    padding: 16px;
-    border-radius: 8px;
+    padding: 16px 18px;
+    border-radius: 10px;
   }
   .meta-item {
     display: flex;
@@ -186,17 +216,60 @@
   }
   input, textarea, select {
     width: 100%;
-    padding: 6px 9px;
+    padding: 7px 10px;
     border: 1px solid var(--border);
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 12.5px;
     font-family: inherit;
     background: #fff;
     color: var(--text-main);
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
   input:focus, textarea:focus, select:focus {
-    outline: 2px solid var(--focus-ring);
-    border-color: transparent;
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
+  }
+
+  /* Interactive Filter Pills Bar */
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    background: #f8faf9;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .filter-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-right: 6px;
+  }
+  .filter-pill {
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-pill:hover {
+    background: #eef3ef;
+    border-color: var(--primary);
+  }
+  .filter-pill.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 2px 6px rgba(6, 78, 59, 0.25);
   }
 
   /* Section Title Bar */
@@ -204,15 +277,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
     color: #fff;
-    padding: 9px 14px;
-    margin: 26px 0 0;
-    border-radius: 6px 6px 0 0;
+    padding: 10px 16px;
+    margin: 28px 0 0;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
   }
   .section-bar h3 {
     margin: 0;
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.3px;
     display: flex;
@@ -220,12 +294,137 @@
     gap: 8px;
   }
   .section-badge {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
     font-size: 11px;
     font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 4px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  /* Interactive Visual Cash Flow Chart */
+  .chart-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  }
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .chart-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .chart-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+  .chart-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    align-items: flex-end;
+    height: 180px;
+    padding: 10px 4px 0;
+    border-bottom: 2px solid var(--border);
+    position: relative;
+  }
+  .chart-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+  }
+  .chart-bars-wrap {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  .bar {
+    width: 44%;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+    min-height: 4px;
+  }
+  .bar-income {
+    background: #10b981;
+    background-image: linear-gradient(180deg, #34d399 0%, #059669 100%);
+  }
+  .bar-expense {
+    background: #f59e0b;
+    background-image: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+  }
+  .chart-col:hover .bar-income { background-image: linear-gradient(180deg, #6ee7b7 0%, #047857 100%); }
+  .chart-col:hover .bar-expense { background-image: linear-gradient(180deg, #fcd34d 0%, #b45309 100%); }
+  .chart-month-label {
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .chart-season-badge {
+    position: absolute;
+    top: -24px;
+    font-size: 9.5px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0.95;
+  }
+  .season-ramadan { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+  .season-qurbani { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
+  .season-summer { background: #fee2e2; color: #991b1b; }
+
+  /* Tooltip for chart */
+  .chart-col:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: pre-line;
+    z-index: 50;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 8px;
+    text-align: center;
   }
 
   /* Table styling */
@@ -235,24 +434,24 @@
     border-top: none;
     background: #fff;
     margin-bottom: 6px;
-    max-height: 70vh;
+    max-height: 72vh;
   }
   table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    min-width: 1360px;
+    min-width: 1420px;
   }
   th, td {
     border-bottom: 1px solid var(--border-light);
     border-right: 1px solid var(--border-light);
-    padding: 4px 6px;
+    padding: 5px 6px;
     font-size: 12px;
     white-space: nowrap;
   }
   th {
     background: #eef3ef;
-    color: var(--primary);
+    color: var(--primary-dark);
     font-weight: 700;
     text-align: center;
     position: sticky;
@@ -261,21 +460,27 @@
     border-bottom: 2px solid var(--border);
   }
 
+  /* Special Season Columns in Table */
+  th.th-ramadan { background: #fef9c3; color: #854d0e; }
+  th.th-qurbani { background: #ffedd5; color: #9a3412; }
+  th.th-summer { background: #fee2e2; color: #991b1b; }
+  th.th-winter { background: #f1f5f9; color: #334155; }
+
   /* Sticky first column (Line item) and second column (Fund) */
   th.col-sticky-1, td.col-sticky-1 {
     position: sticky;
     left: 0;
     z-index: 5;
     background: #fff;
-    min-width: 230px;
-    max-width: 280px;
+    min-width: 250px;
+    max-width: 300px;
     border-right: 1px solid var(--border);
   }
   th.col-sticky-1 { z-index: 15; background: #eef3ef; }
 
   th.col-sticky-2, td.col-sticky-2 {
     position: sticky;
-    left: 230px;
+    left: 250px;
     z-index: 5;
     background: #fff;
     width: 105px;
@@ -288,16 +493,20 @@
     background-color: #f7faf8;
   }
   tbody tr:hover td.col-sticky-1, tbody tr:hover td.col-sticky-2 {
-    background-color: #f0f6f2;
+    background-color: #eff6f1;
+  }
+  tbody tr.row-hidden {
+    display: none !important;
   }
 
   td input {
     border: 1px solid transparent;
-    padding: 3px 5px;
+    padding: 4px 6px;
     font-size: 12px;
     background: transparent;
     border-radius: 4px;
     width: 100%;
+    transition: all 0.15s;
   }
   td input:hover {
     border-color: #cbd5e1;
@@ -307,23 +516,25 @@
     border-color: var(--accent);
     background: #fff;
     outline: none;
+    box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.2);
   }
   td.num input {
     text-align: right;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 11.5px;
+    font-weight: 500;
   }
-  td.num { min-width: 82px; }
-  td.notes-col input { min-width: 130px; }
+  td.num { min-width: 86px; }
+  td.notes-col input { min-width: 140px; }
 
   tr.subtotal td {
     font-weight: 700;
-    background: #e8f0eb !important;
+    background: #e6f0e9 !important;
     border-top: 2px solid var(--border);
     border-bottom: 2px solid var(--border);
   }
   tr.subtotal td.col-sticky-1, tr.subtotal td.col-sticky-2 {
-    background: #e0ece4 !important;
+    background: #dcece2 !important;
   }
   tr.subtotal td input {
     font-weight: 700;
@@ -333,35 +544,61 @@
   td.var.pos input { color: var(--ok); font-weight: 700; }
   td.var.neg input { color: var(--danger); font-weight: 700; }
 
+  /* Quick Actions inside Row */
+  .row-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  .btn-quick-fill {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    opacity: 0.6;
+    transition: opacity 0.15s, background-color 0.15s;
+  }
+  .btn-quick-fill:hover {
+    opacity: 1;
+    background: #e2e8f0;
+    color: var(--primary);
+  }
   .row-action-btn {
     background: none;
     border: none;
     cursor: pointer;
     color: #94a3b8;
-    padding: 2px 4px;
+    padding: 3px 6px;
     font-size: 13px;
-    border-radius: 3px;
+    border-radius: 4px;
+    transition: all 0.15s;
   }
   .row-action-btn:hover {
     color: var(--danger);
     background: var(--danger-bg);
   }
 
+  /* Fund tags */
   .fund-pill {
     display: inline-block;
     font-size: 10px;
     font-weight: 700;
-    padding: 2px 6px;
+    padding: 2px 7px;
     border-radius: 10px;
     text-transform: uppercase;
+    letter-spacing: 0.3px;
   }
-  .fund-General { background: #e0f2fe; color: #0369a1; }
+  .fund-General { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
   .fund-Zakat { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-  .fund-Sadaqah { background: #dcfce7; color: #15803d; }
-  .fund-Fitrana { background: #fce7f3; color: #9d174d; }
-  .fund-Qurbani { background: #ffedd5; color: #9a3412; }
-  .fund-Waqf { background: #f3e8ff; color: #6b21a8; }
-  .fund-Madrasa { background: #e0e7ff; color: #3730a3; }
+  .fund-Sadaqah { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+  .fund-Fitrana { background: #fce7f3; color: #9d174d; border: 1px solid #fbcfe8; }
+  .fund-Qurbani { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
+  .fund-Waqf { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+  .fund-Madrasa { background: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; }
 
   .add-row-bar {
     display: flex;
@@ -370,42 +607,48 @@
   }
   .btn-add {
     background: #fff;
-    border: 1px dashed var(--primary);
+    border: 1.5px dashed var(--primary);
     color: var(--primary);
-    padding: 6px 14px;
-    border-radius: 5px;
+    padding: 7px 16px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 12px;
     font-weight: 600;
-    transition: all 0.15s;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-add:hover {
     background: var(--light-bg);
     border-style: solid;
+    transform: translateY(-1px);
   }
 
   /* KPI Summary Cards */
   .summary-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin-top: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
   }
   .kpi-card {
     background: #fff;
     border: 1.5px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     position: relative;
     overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
   }
   .kpi-card::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 5px;
+    width: 6px;
     height: 100%;
     background: var(--primary);
   }
@@ -419,10 +662,10 @@
     text-transform: uppercase;
     font-weight: 700;
     color: var(--text-muted);
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
   }
   .kpi-value {
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 800;
     color: var(--primary);
     margin-top: 6px;
@@ -438,23 +681,24 @@
 
   /* Flags & Alerts */
   .alert-banner {
-    margin-top: 16px;
-    padding: 12px 16px;
-    border-radius: 6px;
+    margin-top: 18px;
+    padding: 14px 18px;
+    border-radius: 8px;
     font-size: 13px;
     display: none;
-    line-height: 1.5;
+    line-height: 1.55;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
   }
   .alert-banner.show { display: block; }
   .alert-bad {
     background: var(--danger-bg);
     color: var(--danger);
-    border: 1px solid #f8b4bc;
+    border: 1px solid var(--danger-border);
   }
   .alert-good {
     background: var(--ok-bg);
     color: var(--ok);
-    border: 1px solid #b8ebca;
+    border: 1px solid var(--ok-border);
   }
   .alert-warning {
     background: var(--warning-bg);
@@ -466,29 +710,29 @@
   .fund-table-wrap {
     overflow-x: auto;
     border: 1px solid var(--border);
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 10px 10px;
     background: #fff;
   }
   .fund-status-tag {
     display: inline-block;
-    padding: 2px 8px;
-    border-radius: 10px;
+    padding: 3px 10px;
+    border-radius: 12px;
     font-size: 11px;
     font-weight: 700;
   }
-  .status-ok { background: var(--ok-bg); color: var(--ok); }
-  .status-warn { background: var(--warning-bg); color: var(--warning); }
-  .status-bad { background: var(--danger-bg); color: var(--danger); }
+  .status-ok { background: var(--ok-bg); color: var(--ok); border: 1px solid var(--ok-border); }
+  .status-warn { background: var(--warning-bg); color: var(--warning); border: 1px solid #fde68a; }
+  .status-bad { background: var(--danger-bg); color: var(--danger); border: 1px solid var(--danger-border); }
 
   /* Assumptions & Notes Grid */
   .notes-container {
     border: 1px solid var(--border);
-    border-radius: 0 0 6px 6px;
-    padding: 18px;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
     background: #fafcfb;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 18px;
   }
   .note-field label {
     display: block;
@@ -499,39 +743,40 @@
   }
   .note-field textarea {
     width: 100%;
-    min-height: 75px;
+    min-height: 80px;
     resize: vertical;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   /* Governance & Signatures */
   .governance-card {
-    margin-top: 24px;
-    padding: 18px;
-    background: #fdfdfd;
+    margin-top: 26px;
+    padding: 20px;
+    background: #ffffff;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
   }
   .governance-card h4 {
     color: var(--primary);
-    font-size: 13.5px;
+    font-size: 14px;
     margin-bottom: 8px;
   }
   .governance-text {
-    font-size: 12px;
+    font-size: 12.5px;
     color: var(--text-muted);
-    line-height: 1.55;
-    margin-bottom: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
   .signatures-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 24px;
     margin-top: 24px;
   }
   .sig-block {
-    border-top: 1.5px solid #475569;
-    padding-top: 8px;
+    border-top: 2px solid #334155;
+    padding-top: 10px;
     font-size: 12px;
     text-align: center;
   }
@@ -550,8 +795,8 @@
     text-align: center;
     font-size: 11.5px;
     color: #64748b;
-    margin-top: 28px;
-    padding-top: 16px;
+    margin-top: 30px;
+    padding-top: 18px;
     border-top: 1px solid var(--border);
     display: flex;
     flex-wrap: wrap;
@@ -568,14 +813,25 @@
     color: #334155;
   }
 
+  /* Motion accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   /* Print Styles */
   @media print {
     body { background: #fff; padding: 0; font-size: 9pt; }
-    .container { box-shadow: none; padding: 0; max-width: none; border-radius: 0; }
-    .toolbar, .add-row-bar, .row-action-btn, .btn, .alert-banner { display: none !important; }
+    .container { box-shadow: none; padding: 0; max-width: none; border-radius: 0; border: none; }
+    .toolbar, .add-row-bar, .row-action-btn, .btn, .alert-banner, .filter-bar, .btn-quick-fill { display: none !important; }
+    .chart-card { display: block !important; border: 1px solid #ccc; page-break-inside: avoid; }
     .table-wrapper { overflow: visible !important; border: none; max-height: none; }
     table { min-width: 100% !important; font-size: 8pt; }
-    th, td { padding: 2px 3px !important; }
+    th, td { padding: 2px 4px !important; }
     th.col-sticky-1, td.col-sticky-1, th.col-sticky-2, td.col-sticky-2 { position: static !important; }
     input, textarea { border: none !important; background: transparent !important; }
     .section-bar { background: #222 !important; color: #fff !important; }
@@ -658,10 +914,41 @@
     </div>
   </div>
 
+  <!-- Interactive Monthly Cash Flow Chart -->
+  <div class="section-bar">
+    <h3><span>Monthly Cash Flow Visualization (Jan – Dec 2027)</span></h3>
+    <span class="section-badge">Live Interactive Dynamic Chart</span>
+  </div>
+  <div class="chart-card">
+    <div class="chart-header">
+      <div class="chart-title">Income vs. Expense Monthly Trajectory (PKR)</div>
+      <div class="chart-legend">
+        <div class="legend-item"><div class="legend-color" style="background:#10b981;"></div> Income</div>
+        <div class="legend-item"><div class="legend-color" style="background:#f59e0b;"></div> Expenses</div>
+      </div>
+    </div>
+    <div class="chart-container" id="monthly-chart">
+      <!-- Generated dynamically by renderMonthlyChart() -->
+    </div>
+  </div>
+
+  <!-- Interactive Fund Filter Pills -->
+  <div class="filter-bar" role="navigation" aria-label="Filter rows by fund">
+    <span class="filter-label">Filter View by Fund:</span>
+    <button class="filter-pill active" onclick="filterByFund('All', this)">All Funds (34)</button>
+    <button class="filter-pill" onclick="filterByFund('General', this)">General</button>
+    <button class="filter-pill" onclick="filterByFund('Zakat', this)">Zakat</button>
+    <button class="filter-pill" onclick="filterByFund('Madrasa', this)">Madrasa</button>
+    <button class="filter-pill" onclick="filterByFund('Waqf', this)">Waqf</button>
+    <button class="filter-pill" onclick="filterByFund('Sadaqah', this)">Sadaqah</button>
+    <button class="filter-pill" onclick="filterByFund('Fitrana', this)">Fitrana</button>
+    <button class="filter-pill" onclick="filterByFund('Qurbani', this)">Qurbani</button>
+  </div>
+
   <!-- 1. INCOME -->
   <div class="section-bar">
     <h3><span>1. Projected Monthly Income 2027 (PKR)</span></h3>
-    <span class="section-badge">Includes Seasonal Ramadan (Feb-Mar) &amp; Qurbani (May) Spikes</span>
+    <span class="section-badge">Auto Comma Formatting Enabled</span>
   </div>
   <div class="table-wrapper" tabindex="0" role="region" aria-label="Income Budget Table">
     <table id="income">
@@ -670,9 +957,24 @@
         <tr>
           <th class="col-sticky-1">Income Line Item</th>
           <th class="col-sticky-2">Fund Type</th>
-          <th>Jan</th><th>Feb*</th><th>Mar*</th><th>Apr</th><th>May*</th><th>Jun</th>
-          <th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
-          <th>Annual 2027</th><th>2026 Actual</th><th>Variance</th><th>Growth</th><th>Notes &amp; Assumptions</th><th>Del</th>
+          <th class="th-winter" title="Winter Month">Jan ❄️</th>
+          <th class="th-ramadan" title="Ramadan Begins (Feb 8)">Feb 🌙</th>
+          <th class="th-ramadan" title="Ramadan 27th & Eid ul-Fitr">Mar 🌙</th>
+          <th>Apr</th>
+          <th class="th-qurbani" title="Eid ul-Adha (May 16-19)">May 🐑</th>
+          <th class="th-summer" title="Peak Summer AC">Jun ☀️</th>
+          <th class="th-summer" title="Peak Summer AC">Jul ☀️</th>
+          <th class="th-summer" title="Peak Summer AC">Aug ☀️</th>
+          <th>Sep</th>
+          <th>Oct</th>
+          <th class="th-winter" title="Pre-Winter">Nov ❄️</th>
+          <th class="th-winter" title="Winter Month">Dec ❄️</th>
+          <th>Annual 2027</th>
+          <th>2026 Actual</th>
+          <th>Variance</th>
+          <th>Growth</th>
+          <th>Notes &amp; Assumptions</th>
+          <th>Del</th>
         </tr>
       </thead>
       <tbody id="income-body"></tbody>
@@ -685,7 +987,7 @@
   <!-- 2. EXPENSES -->
   <div class="section-bar">
     <h3><span>2. Projected Monthly Expenses 2027 (PKR)</span></h3>
-    <span class="section-badge">Includes Salaries, Utilities (FESCO/SNGPL), Madrasa, Zakat, Waqf Upkeep</span>
+    <span class="section-badge">Salaries, Utilities (FESCO/SNGPL), Madrasa, Zakat</span>
   </div>
   <div class="table-wrapper" tabindex="0" role="region" aria-label="Expense Budget Table">
     <table id="expense">
@@ -694,9 +996,24 @@
         <tr>
           <th class="col-sticky-1">Expense Line Item</th>
           <th class="col-sticky-2">Fund Type</th>
-          <th>Jan</th><th>Feb*</th><th>Mar*</th><th>Apr</th><th>May*</th><th>Jun</th>
-          <th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
-          <th>Annual 2027</th><th>2026 Actual</th><th>Variance</th><th>Growth</th><th>Notes &amp; Assumptions</th><th>Del</th>
+          <th class="th-winter" title="Winter Gas Geysers">Jan ❄️</th>
+          <th class="th-ramadan" title="Taraweeh & Iftar">Feb 🌙</th>
+          <th class="th-ramadan" title="Fitrana & Eid Bonus">Mar 🌙</th>
+          <th>Apr</th>
+          <th class="th-qurbani" title="Qurbani Operations">May 🐑</th>
+          <th class="th-summer" title="Heavy FESCO Grid AC">Jun ☀️</th>
+          <th class="th-summer" title="Heavy FESCO Grid AC">Jul ☀️</th>
+          <th class="th-summer" title="Heavy FESCO Grid AC">Aug ☀️</th>
+          <th>Sep</th>
+          <th>Oct</th>
+          <th class="th-winter" title="Pre-Winter Prep">Nov ❄️</th>
+          <th class="th-winter" title="Winter Gas Geysers">Dec ❄️</th>
+          <th>Annual 2027</th>
+          <th>2026 Actual</th>
+          <th>Variance</th>
+          <th>Growth</th>
+          <th>Notes &amp; Assumptions</th>
+          <th>Del</th>
         </tr>
       </thead>
       <tbody id="expense-body"></tbody>
@@ -737,7 +1054,7 @@
   <div id="flag-alert" class="alert-banner"></div>
 
   <!-- 4. SHARIAH FUND SPLIT & TAMLEEK AUDIT -->
-  <div class="section-bar" style="margin-top: 24px;">
+  <div class="section-bar" style="margin-top: 26px;">
     <h3><span>4. Shariah Fund Accounting &amp; Restriction Separation Check</span></h3>
     <span class="section-badge">Strict Compliance: Zakat &amp; Waqf Rules under Islamic Fiqh</span>
   </div>
@@ -758,7 +1075,7 @@
   </div>
 
   <!-- 5. ASSUMPTIONS & LOCAL CONTEXT -->
-  <div class="section-bar" style="margin-top: 24px;">
+  <div class="section-bar" style="margin-top: 26px;">
     <h3><span>5. Joharabad Local Assumptions &amp; Regulatory Disclosures</span></h3>
     <span class="section-badge">Punjab Charities Act 2019 &amp; FBR Compliance</span>
   </div>
@@ -808,7 +1125,7 @@
   <!-- Footer -->
   <footer class="app-footer">
     <div>Jamia Masjid &amp; Madrasa Nurulquran · Joharabad, Khushab, Punjab · Annual Operating Budget 2027</div>
-    <div>System Version: <span class="version-tag">v1.0.2 (updated 2026-11-04 21:29)</span></div>
+    <div>System Version: <span class="version-tag">v1.0.3 (updated 2026-11-04 22:12)</span></div>
   </footer>
 
 </div>
@@ -828,7 +1145,7 @@
     "Madrasa": "Education: Quran classes, Nazra, Tahfeez-ul-Quran teacher stipends, books, and curriculum."
   };
 
-  // Comprehensive Joharabad 2027 Baseline Data (PKR)
+  // Comprehensive Joharabad 2027 Baseline Data (PKR) with all typos corrected
   const BENCHMARK_INCOME = [
     { name: "Jumu'ah & Daily Sadaqah Box Collections", fund: "General", m: [220000, 480000, 650000, 240000, 320000, 230000, 240000, 240000, 250000, 260000, 250000, 260000], prior: 3250000, note: "Peaks in Ramadan Feb/Mar & Eid days" },
     { name: "Monthly Musalli Pledges & Memberships", fund: "General", m: [210000, 210000, 210000, 210000, 210000, 210000, 210000, 210000, 210000, 210000, 210000, 210000], prior: 2280000, note: "120 regular community donors" },
@@ -852,7 +1169,7 @@
     { name: "Madrasa Tahfeez Teachers (3 Asatizah)", fund: "Madrasa", m: [114000, 114000, 159000, 114000, 114000, 114000, 114000, 114000, 114000, 114000, 114000, 114000], prior: 1280000, note: "3 Tajweed/Hifz teachers + bonus" },
     { name: "Madrasa Deserving Talaba Food & Ration (Mustahiq)", fund: "Zakat", m: [110000, 110000, 110000, 110000, 110000, 110000, 110000, 110000, 110000, 110000, 110000, 110000], prior: 1180000, note: "Daily ration for 35 orphan/poor boarders" },
     { name: "Electricity – FESCO (Summer AC Peak)", fund: "General", m: [40000, 55000, 75000, 110000, 190000, 220000, 230000, 210000, 160000, 90000, 45000, 40000], prior: 1350000, note: "Solar offsets daytime; summer night AC high" },
-    { name: "Gas – SNGPL (Winter Wudu Heating Geysers)", fund: "General", m: [35000, 30000, 15000, 8000, 6000, 6000, 6000, 6000, 6000, 10000, 25000, 38000], prior: 1750000, note: "Heated water for Fajr/Isha in winter" },
+    { name: "Gas – SNGPL (Winter Wudu Heating Geysers)", fund: "General", m: [35000, 30000, 15000, 8000, 6000, 6000, 6000, 6000, 6000, 10000, 25000, 38000], prior: 175000, note: "Heated water for Fajr/Isha in winter (fixed typo)" },
     { name: "Diesel Generator Fuel & Maintenance", fund: "General", m: [20000, 30000, 40000, 45000, 65000, 75000, 75000, 70000, 50000, 30000, 20000, 20000], prior: 490000, note: "Backup power during load-shedding" },
     { name: "Clean RO Water Plant Filters & Maintenance", fund: "General", m: [25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000], prior: 270000, note: "Cartridge, chemical & pump upkeep" },
     { name: "Cleaning Supplies, Phenyle & Wudu Hygiene", fund: "General", m: [22000, 35000, 35000, 22000, 22000, 22000, 22000, 22000, 22000, 22000, 22000, 22000], prior: 255000, note: "Heavy washing in Ramadan & Eids" },
@@ -865,11 +1182,12 @@
     { name: "Janazah Gah, Ghusal & Free Kafan Support", fund: "Sadaqah", m: [20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000, 20000], prior: 210000, note: "Burial kits for destitute deceased" },
     { name: "Audit, PCC Compliance, Legal & Bank Fees", fund: "General", m: [16000, 16000, 16000, 16000, 16000, 16000, 16000, 16000, 16000, 16000, 16000, 16000], prior: 170000, note: "External audit & charity commission" },
     { name: "Office Stationery, Registers & Software", fund: "General", m: [15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000], prior: 160000, note: "Receipt books & donor SMS gateway" },
-        { name: "Solar Inverter, Battery & Energy Reserve", fund: "General", m: [30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000], prior: 320000, note: "Sinking fund for solar inverter & battery replacements" },
-    { name: "Masjid Carpets Washing & Deep Steam Cleaning", fund: "General", m: [0, 80000, 0, 0, 0, 0, 0, 0, 0, 0, 80000, 0], prior: 140000, note: "Pre-Ramadan (Feb) and Pre-Winter (Nov) deep hygiene" },,
+    { name: "Solar Inverter, Battery & Energy Reserve", fund: "General", m: [30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000, 30000], prior: 320000, note: "Sinking fund for solar inverter & battery replacements" },
+    { name: "Masjid Carpets Washing & Deep Steam Cleaning", fund: "General", m: [0, 80000, 0, 0, 0, 0, 0, 0, 0, 0, 80000, 0], prior: 140000, note: "Pre-Ramadan (Feb) and Pre-Winter (Nov) deep hygiene" },
     { name: "General Emergency Contingency Reserve", fund: "General", m: [25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000, 25000], prior: 250000, note: "Water motor burn / transformer repair" }
   ];
 
+  // Helper to extract raw number
   function num(val) {
     if (typeof val === "number") return isNaN(val) ? 0 : val;
     if (!val) return 0;
@@ -878,8 +1196,46 @@
     return isNaN(parsed) ? 0 : parsed;
   }
 
+  // Comma formatting with 3 digits grouping
+  function formatComma(n) {
+    if (n === null || n === undefined || isNaN(n)) return "0";
+    return Math.round(n).toLocaleString("en-US");
+  }
+
   function fmtPKR(n) {
-    return "Rs. " + Math.round(n).toLocaleString("en-PK");
+    return "Rs. " + formatComma(n);
+  }
+
+  // Real-time comma formatting input handler that preserves cursor position
+  function handleNumericInput(input) {
+    const rawVal = input.value;
+    const cursor = input.selectionStart || rawVal.length;
+    // Count digits before cursor
+    const digitsBefore = rawVal.slice(0, cursor).replace(/[^0-9]/g, "").length;
+    const cleanDigits = rawVal.replace(/[^0-9]/g, "");
+
+    if (!cleanDigits) {
+      input.value = "";
+      recalc();
+      return;
+    }
+
+    const formatted = parseInt(cleanDigits, 10).toLocaleString("en-US");
+    input.value = formatted;
+
+    // Restore cursor position
+    let newCursor = 0;
+    let counted = 0;
+    for (let i = 0; i < formatted.length; i++) {
+      if (/[0-9]/.test(formatted[i])) counted++;
+      if (counted === digitsBefore) {
+        newCursor = i + 1;
+        break;
+      }
+    }
+    if (digitsBefore === 0) newCursor = 0;
+    input.setSelectionRange(newCursor, newCursor);
+    recalc();
   }
 
   function fundSelectHTML(selected) {
@@ -891,7 +1247,7 @@
     let s = "";
     for (let i = 0; i < MONTHS; i++) {
       const val = monthsArr && monthsArr[i] !== undefined ? monthsArr[i] : 0;
-      s += `<td class="num"><input type="number" step="1000" min="0" class="m m-${i}" value="${val}" /></td>`;
+      s += `<td class="num"><input type="text" inputmode="numeric" class="m m-${i}" value="${formatComma(val)}" oninput="handleNumericInput(this)" /></td>`;
     }
     return s;
   }
@@ -901,12 +1257,17 @@
     const fund = item.fund || "General";
     const prior = item.prior || 0;
     const note = item.note || "";
-    return `<tr>
-      <td class="name col-sticky-1"><input value="${escapeHTML(name)}" class="line-name" /></td>
+    return `<tr data-fund="${fund}">
+      <td class="name col-sticky-1">
+        <div class="row-title-wrap">
+          <input value="${escapeHTML(name)}" class="line-name" />
+          <button type="button" class="btn-quick-fill" onclick="quickFillRow(this)" title="Fill across all months">⚡Fill</button>
+        </div>
+      </td>
       <td class="col-sticky-2">${fundSelectHTML(fund)}</td>
       ${monthCellsHTML(item.m)}
       <td class="num"><input type="text" readonly class="annual" /></td>
-      <td class="num"><input type="number" min="0" step="1000" class="prior" value="${prior}" /></td>
+      <td class="num"><input type="text" inputmode="numeric" class="prior" value="${formatComma(prior)}" oninput="handleNumericInput(this)" /></td>
       <td class="num var"><input type="text" readonly class="variance" /></td>
       <td class="num var growth"><input type="text" readonly class="growth-rate" style="font-size:11px;" /></td>
       <td class="notes-col"><input value="${escapeHTML(note)}" class="line-note" /></td>
@@ -917,7 +1278,7 @@
   function subtotalHTML(label) {
     return `<tr class="subtotal">
       <td class="col-sticky-1">${label}</td>
-      <td class="col-sticky-2" style="font-size: 10px; color: var(--primary);">TOTAL</td>
+      <td class="col-sticky-2" style="font-size: 10px; color: var(--primary); font-weight:800;">TOTAL</td>
       ${Array(MONTHS).fill(`<td class="num"><input readonly class="sub-m" /></td>`).join("")}
       <td class="num"><input readonly class="sub-annual" /></td>
       <td class="num"><input readonly class="sub-prior" /></td>
@@ -952,6 +1313,37 @@
     }
   }
 
+  // Quick fill helper across all 12 months
+  function quickFillRow(btn) {
+    const row = btn.closest("tr");
+    const inputs = row.querySelectorAll("input.m");
+    const firstVal = inputs[0].value || "0";
+    const promptVal = prompt("Enter amount to copy across all 12 months (or leave empty to copy Jan's value):", firstVal);
+    if (promptVal !== null) {
+      const cleanNum = num(promptVal);
+      const formatted = formatComma(cleanNum);
+      inputs.forEach(inp => inp.value = formatted);
+      recalc();
+    }
+  }
+
+  // Interactive Fund Filtering
+  function filterByFund(fundName, btn) {
+    document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+
+    const rows = document.querySelectorAll("#income-body tr:not(.subtotal), #expense-body tr:not(.subtotal)");
+    rows.forEach(r => {
+      const select = r.querySelector("select.fund-select");
+      const rowFund = select ? select.value : r.getAttribute("data-fund");
+      if (fundName === "All" || rowFund === fundName) {
+        r.classList.remove("row-hidden");
+      } else {
+        r.classList.add("row-hidden");
+      }
+    });
+  }
+
   function sumTable(bodyId) {
     const rows = [...document.querySelectorAll(`#${bodyId} tr:not(.subtotal)`)];
     const monthly = Array(MONTHS).fill(0);
@@ -967,17 +1359,18 @@
         monthly[i] += v;
         rowAnnual += v;
       });
-      r.querySelector(".annual").value = Math.round(rowAnnual).toLocaleString("en-PK");
+      r.querySelector(".annual").value = formatComma(rowAnnual);
       const p = num(r.querySelector(".prior").value);
       prior += p;
       annual += rowAnnual;
 
       const fund = r.querySelector("select.fund-select").value;
+      r.setAttribute("data-fund", fund);
       fundTotals[fund] = (fundTotals[fund] || 0) + rowAnnual;
 
       const varEl = r.querySelector(".variance");
       const diff = rowAnnual - p;
-      varEl.value = (diff >= 0 ? "+" : "") + Math.round(diff).toLocaleString("en-PK");
+      varEl.value = (diff >= 0 ? "+" : "") + formatComma(diff);
 
       const growthEl = r.querySelector(".growth-rate");
       if (growthEl) {
@@ -997,6 +1390,47 @@
     return { monthly, annual, prior, fundTotals };
   }
 
+  // Render Dynamic Interactive Chart
+  function renderMonthlyChart(incMonthly, expMonthly) {
+    const chart = document.getElementById("monthly-chart");
+    if (!chart) return;
+
+    let maxVal = 1;
+    for (let i = 0; i < MONTHS; i++) {
+      if (incMonthly[i] > maxVal) maxVal = incMonthly[i];
+      if (expMonthly[i] > maxVal) maxVal = expMonthly[i];
+    }
+
+    const seasons = {
+      1: { name: "Ramadan Starts 🌙", cls: "season-ramadan" },
+      2: { name: "Eid ul-Fitr 🌙", cls: "season-ramadan" },
+      4: { name: "Eid ul-Adha 🐑", cls: "season-qurbani" },
+      5: { name: "Peak Summer ☀️", cls: "season-summer" },
+      6: { name: "Peak Summer ☀️", cls: "season-summer" },
+      7: { name: "Peak Summer ☀️", cls: "season-summer" }
+    };
+
+    chart.innerHTML = MONTH_NAMES.map((mName, i) => {
+      const inc = incMonthly[i];
+      const exp = expMonthly[i];
+      const net = inc - exp;
+      const incPct = Math.max(3, (inc / maxVal) * 94);
+      const expPct = Math.max(3, (exp / maxVal) * 94);
+
+      const seasonBadge = seasons[i] ? `<span class="chart-season-badge ${seasons[i].cls}">${seasons[i].name}</span>` : "";
+      const tooltip = `${mName} 2027\nIncome: Rs. ${formatComma(inc)}\nExpense: Rs. ${formatComma(exp)}\nNet: ${net >= 0 ? '+' : ''}Rs. ${formatComma(net)}`;
+
+      return `<div class="chart-col" data-tooltip="${tooltip}">
+        ${seasonBadge}
+        <div class="chart-bars-wrap">
+          <div class="bar bar-income" style="height: ${incPct}%;"></div>
+          <div class="bar bar-expense" style="height: ${expPct}%;"></div>
+        </div>
+        <div class="chart-month-label">${mName}</div>
+      </div>`;
+    }).join("");
+  }
+
   function recalc() {
     const inc = sumTable("income-body");
     const exp = sumTable("expense-body");
@@ -1005,12 +1439,12 @@
     [["income-body", inc], ["expense-body", exp]].forEach(([id, t]) => {
       const sub = document.querySelector(`#${id} tr.subtotal`);
       if (sub) {
-        sub.querySelectorAll(".sub-m").forEach((el, i) => el.value = Math.round(t.monthly[i]).toLocaleString("en-PK"));
-        sub.querySelector(".sub-annual").value = Math.round(t.annual).toLocaleString("en-PK");
-        sub.querySelector(".sub-prior").value = Math.round(t.prior).toLocaleString("en-PK");
+        sub.querySelectorAll(".sub-m").forEach((el, i) => el.value = formatComma(t.monthly[i]));
+        sub.querySelector(".sub-annual").value = formatComma(t.annual);
+        sub.querySelector(".sub-prior").value = formatComma(t.prior);
         const diff = t.annual - t.prior;
         const diffEl = sub.querySelector(".sub-var");
-        diffEl.value = (diff >= 0 ? "+" : "") + Math.round(diff).toLocaleString("en-PK");
+        diffEl.value = (diff >= 0 ? "+" : "") + formatComma(diff);
         diffEl.closest("td").classList.toggle("pos", diff > 0);
         diffEl.closest("td").classList.toggle("neg", diff < 0);
 
@@ -1037,6 +1471,9 @@
     const expGrowth = exp.prior > 0 ? (((exp.annual - exp.prior) / exp.prior) * 100).toFixed(1) : 0;
     document.getElementById("inc-growth-stat").textContent = `2026 Actual: ${fmtPKR(inc.prior)} (${incGrowth >= 0 ? '+' : ''}${incGrowth}%)`;
     document.getElementById("exp-growth-stat").textContent = `2026 Actual: ${fmtPKR(exp.prior)} (${expGrowth >= 0 ? '+' : ''}${expGrowth}%)`;
+
+    // Render interactive chart
+    renderMonthlyChart(inc.monthly, exp.monthly);
 
     // Monthly liquidity & Deficit analysis
     const flag = document.getElementById("flag-alert");
@@ -1077,22 +1514,15 @@
       return `<tr>
         <td><span class="fund-pill fund-${f}">${f}</span></td>
         <td style="font-size:11.5px; color:#475569;">${FUND_PURPOSES[f] || ""}</td>
-        <td class="num" style="font-weight:600;">${Math.round(incF).toLocaleString("en-PK")}</td>
-        <td class="num" style="font-weight:600;">${Math.round(expF).toLocaleString("en-PK")}</td>
-        <td class="num" style="font-weight:700; color:${bal >= 0 ? 'var(--ok)' : 'var(--danger)'};">${(bal < 0 ? "(" : "") + Math.round(Math.abs(bal)).toLocaleString("en-PK") + (bal < 0 ? ")" : "")}</td>
+        <td class="num" style="font-weight:600;">${formatComma(incF)}</td>
+        <td class="num" style="font-weight:600;">${formatComma(expF)}</td>
+        <td class="num" style="font-weight:700; color:${bal >= 0 ? 'var(--ok)' : 'var(--danger)'};">${(bal < 0 ? "(" : "") + formatComma(Math.abs(bal)) + (bal < 0 ? ")" : "")}</td>
         <td>${statusTag}</td>
       </tr>`;
     }).join("");
   }
 
   // Interactive Event Listeners
-  document.addEventListener("input", e => {
-    if (e.target.matches("input.m, .prior")) {
-      recalc();
-      debounceSave();
-    }
-  });
-
   document.addEventListener("change", e => {
     if (e.target.matches("select.fund-select, input, textarea")) {
       recalc();
@@ -1177,8 +1607,10 @@
     const badge = document.getElementById("save-status");
     const timeStr = new Date().toLocaleTimeString();
     badge.textContent = `Saved locally at ${timeStr}`;
+    badge.classList.add("saved-pulse");
     badge.style.background = "#dcfce7";
     badge.style.color = "#15803d";
+    setTimeout(() => badge.classList.remove("saved-pulse"), 1200);
     if (!silent) {
       setTimeout(() => { badge.textContent = "Auto-save Ready"; badge.style.background = "#e2ede6"; badge.style.color = "var(--primary)"; }, 3500);
     }
